@@ -1,0 +1,17 @@
+<div class="fixed top-0 w-1/6 h-screen lg:left-0 p-2 text-center bg-gray-900">
+
+
+    <div class="text-gray-100 text-xl">
+        <a class="p-2.5 mt-1 flex items-center " href="">
+            <img src="https://cdn.discordapp.com/attachments/1157712444739829850/1173340444252459018/icono.png?ex=65639971&is=65512471&hm=379878af53512a8ae446739ac470deec2b8d9e8b8f111a80dac66c47440d7a15&"
+                class="w-6 h-6 rounded-md mx-auto lg:mx-0" alt="Icono">
+            <h1 class="font-bold text-gray-200 text-md ml-3 hidden lg:inline">GifsAlarbon</h1>
+        </a>
+        <div class="my-2 bg-gray-600 h-[1px]"></div>
+    </div>
+
+    <button class="w-full p-2.5 mt-3 rounded-full  bg-slate-100 hover:bg-slate-200 text-center font-semibold"
+        *ngFor="let palabra of listadoHistoria" (click)="buscaGif(palabra) ">
+        {{ palabra | titlecase }}
+    </button>
+</div>

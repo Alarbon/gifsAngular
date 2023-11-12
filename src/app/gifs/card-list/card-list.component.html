@@ -1,0 +1,17 @@
+<div class="container mx-auto ">
+    <h1 class="text-gray-100 text-3xl text-center mb-4">GIFs DE {{ gifBuscado | uppercase}}</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
+        <div class="animate__animated animate__backInRight animate__faster max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 transition-opacity duration-75 "
+            *ngFor="let gif of listaGif">
+
+            <h5 class=" p-5 mb-2 text-2xl font-bold tracking-tight dark:text-white text-center  ">
+                {{ gif.title.length > 23 ? gif.title.slice(0, 23) + '...' : gif.title }}
+            </h5>
+
+            <div class="flex items-end justify-center relative h-48 sm:h-64 md:h-72 lg:h-80 w-full overflow-hidden">
+                <img class="object-cover w-full h-full rounded-b-lg" src="{{gif.images.downsized_medium.url}}"
+                    alt="{{gif.title}}" title="{{gif.title}}" />
+            </div>
+        </div>
+    </div>
+</div>
